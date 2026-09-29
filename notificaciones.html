@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notificaciones · Hospital General San Juan</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="brand"><span class="brand-mark">HSJ</span> Hospital General San Juan</div>
+  <nav><ul>
+    <li><a href="panel-paciente.html">Inicio</a></li>
+    <li><a href="agendar-cita.html">Agendar Cita</a></li>
+    <li><a href="mis-citas.html">Mis Citas</a></li>
+    <li><a href="ver-resultados.html">Resultados</a></li>
+  </ul></nav>
+  <div class="usuario">
+    <a class="icono-noti" href="notificaciones.html" aria-label="Notificaciones">🔔</a>
+    <span>Elena Ramírez</span>
+    <a href="index.html" class="btn btn-secundario" style="padding:6px 12px;">Salir</a>
+  </div>
+</header>
+
+<main>
+  <h1>Centro de notificaciones</h1>
+  <p class="muted">RF-03: avisos automáticos de citas y resultados.</p>
+
+  <div class="lista-tarjetas">
+    <div class="tarjeta-item">
+      <div class="info">
+        <h3>🧪 Resultado disponible</h3>
+        <p class="muted">Tu Biometría hemática ya está lista para descargar.</p>
+      </div>
+      <span class="muted">hace 2 horas</span>
+    </div>
+    <div class="tarjeta-item">
+      <div class="info">
+        <h3>📅 Recordatorio de cita</h3>
+        <p class="muted">Tu cita de Medicina General es mañana a las 10:30 hrs.</p>
+      </div>
+      <span class="muted">hace 1 día</span>
+    </div>
+    <div class="tarjeta-item">
+      <div class="info">
+        <h3>✅ Cita confirmada</h3>
+        <p class="muted">Se confirmó tu cita de Traumatología con el Dr. Núñez.</p>
+      </div>
+      <span class="muted">hace 3 días</span>
+    </div>
+  </div>
+</main>
+<footer class="app-footer">Hospital General San Juan — Portal del Paciente</footer>
+</body>
+</html>

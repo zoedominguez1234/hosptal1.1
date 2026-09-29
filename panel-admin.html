@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Administrador · Hospital General San Juan</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="brand"><span class="brand-mark">HSJ</span> Hospital General San Juan</div>
+  <nav><ul>
+    <li><a href="panel-admin.html" class="activo">Inicio</a></li>
+    <li><a href="gestion-usuarios.html">Usuarios</a></li>
+    <li><a href="reportes.html">Reportes</a></li>
+  </ul></nav>
+  <div class="usuario">
+    <span>Admin. Torres</span>
+    <a href="index.html" class="btn btn-secundario" style="padding:6px 12px;">Salir</a>
+  </div>
+</header>
+
+<main>
+  <h1>Panel del administrador</h1>
+  <p class="muted">RF-01 y RF-06: control de acceso por rol y generación de reportes.</p>
+
+  <section class="grid-accesos" aria-label="Accesos rápidos">
+    <a class="acceso" href="gestion-usuarios.html">
+      <span class="icono">👥</span>
+      <h3>Gestión de usuarios</h3>
+      <p class="muted">Alta, baja y asignación de roles del personal.</p>
+    </a>
+    <a class="acceso" href="reportes.html">
+      <span class="icono">📊</span>
+      <h3>Reportes generales</h3>
+      <p class="muted">Estadísticas de citas y afluencia de pacientes.</p>
+    </a>
+  </section>
+
+  <h2>Resumen del día</h2>
+  <div class="fila-2" style="max-width:none;">
+    <div class="panel acento-ok"><h3>38</h3><p class="muted">Citas atendidas hoy</p></div>
+    <div class="panel acento-warn"><h3>5</h3><p class="muted">Citas por confirmar</p></div>
+  </div>
+</main>
+<footer class="app-footer">Hospital General San Juan — Panel Administrador</footer>
+</body>
+</html>

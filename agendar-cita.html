@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendar Cita · Hospital General San Juan</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="brand"><span class="brand-mark">HSJ</span> Hospital General San Juan</div>
+  <nav><ul>
+    <li><a href="panel-paciente.html">Inicio</a></li>
+    <li><a href="agendar-cita.html" class="activo">Agendar Cita</a></li>
+    <li><a href="mis-citas.html">Mis Citas</a></li>
+    <li><a href="ver-resultados.html">Resultados</a></li>
+  </ul></nav>
+  <div class="usuario">
+    <a class="icono-noti" href="notificaciones.html" aria-label="Notificaciones">🔔<span class="badge">2</span></a>
+    <span>Elena Ramírez</span>
+    <a href="index.html" class="btn btn-secundario" style="padding:6px 12px;">Salir</a>
+  </div>
+</header>
+
+<main>
+  <h1>Agendar cita médica</h1>
+  <p class="muted">Selecciona la especialidad, fecha y horario disponible. (RF-02)</p>
+
+  <div class="panel">
+    <!-- Formulario con validación nativa: required en todos los campos -->
+    <form class="ancho-completo" onsubmit="return false;">
+      <div class="fila-2">
+        <div class="campo">
+          <label for="especialidad">Especialidad</label>
+          <select id="especialidad" name="especialidad" required>
+            <option value="">Selecciona una especialidad</option>
+            <option>Medicina General</option>
+            <option>Pediatría</option>
+            <option>Ginecología</option>
+            <option>Traumatología</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="horario">Horario disponible</label>
+        <select id="horario" name="horario" required>
+          <option value="">Selecciona un horario</option>
+          <option>09:00 hrs</option>
+          <option>10:30 hrs</option>
+          <option>12:00 hrs</option>
+          <option>16:00 hrs</option>
+        </select>
+        <span class="ayuda">Si no hay horarios, el sistema mostrará "Horario no disponible" y deberás elegir otra fecha.</span>
+      </div>
+
+      <div class="campo">
+        <label for="motivo">Motivo de la consulta (opcional)</label>
+        <textarea id="motivo" name="motivo" rows="3" placeholder="Ej. dolor de garganta desde hace 3 días"></textarea>
+      </div>
+
+      <div class="acciones">
+        <a href="confirmacion-cita.html" class="btn btn-primario">Confirmar solicitud</a>
+        <a href="panel-paciente.html" class="btn btn-secundario">Cancelar</a>
+      </div>
+    </form>
+  </div>
+</main>
+<footer class="app-footer">Hospital General San Juan — Portal del Paciente</footer>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel del Paciente · Hospital General San Juan</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="brand"><span class="brand-mark">HSJ</span> Hospital General San Juan</div>
+  <nav><ul>
+    <li><a href="panel-paciente.html" class="activo">Inicio</a></li>
+    <li><a href="agendar-cita.html">Agendar Cita</a></li>
+    <li><a href="mis-citas.html">Mis Citas</a></li>
+    <li><a href="ver-resultados.html">Resultados</a></li>
+  </ul></nav>
+  <div class="usuario">
+    <a class="icono-noti" href="notificaciones.html" aria-label="Notificaciones">🔔<span class="badge">2</span></a>
+    <span>Elena Ramírez</span>
+    <a href="index.html" class="btn btn-secundario" style="padding:6px 12px;">Salir</a>
+  </div>
+</header>
+
+<main>
+  <h1>Hola, Elena</h1>
+  <p class="muted">Expediente EXP-004821 · Consulta Externa</p>
+
+  <!-- RF-02, RF-03, RF-04: accesos principales del rol Paciente -->
+  <section class="grid-accesos" aria-label="Accesos rápidos">
+    <a class="acceso" href="agendar-cita.html">
+      <span class="icono">📅</span>
+      <h3>Agendar cita</h3>
+      <p class="muted">Elige especialidad, fecha y horario en línea.</p>
+    </a>
+    <a class="acceso" href="mis-citas.html">
+      <span class="icono">🗂️</span>
+      <h3>Mis citas</h3>
+      <p class="muted">Consulta, reprograma o cancela tus citas.</p>
+    </a>
+    <a class="acceso" href="ver-resultados.html">
+      <span class="icono">🧪</span>
+      <h3>Ver resultados</h3>
+      <p class="muted">Estado y descarga de tus estudios.</p>
+    </a>
+    <a class="acceso" href="notificaciones.html">
+      <span class="icono">🔔</span>
+      <h3>Notificaciones</h3>
+      <p class="muted">Avisos de citas y resultados disponibles.</p>
+    </a>
+  </section>
+
+  <h2>Próxima cita</h2>
+  <div class="panel acento-ok">
+    <div class="tarjeta-item" style="border:0; padding:0;">
+      <div class="info">
+        <h3>Medicina General — Dra. Salazar</h3>
+        <p class="muted">Miércoles 1 de octubre, 10:30 hrs · Consultorio 4</p>
+      </div>
+      <span class="estado estado-ok">Confirmada</span>
+    </div>
+  </div>
+</main>
+<footer class="app-footer">Hospital General San Juan — Portal del Paciente</footer>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reportes Generales · Hospital General San Juan</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="brand"><span class="brand-mark">HSJ</span> Hospital General San Juan</div>
+  <nav><ul>
+    <li><a href="panel-admin.html">Inicio</a></li>
+    <li><a href="gestion-usuarios.html">Usuarios</a></li>
+    <li><a href="reportes.html" class="activo">Reportes</a></li>
+  </ul></nav>
+  <div class="usuario">
+    <span>Admin. Torres</span>
+    <a href="index.html" class="btn btn-secundario" style="padding:6px 12px;">Salir</a>
+  </div>
+</header>
+
+<main>
+  <h1>Reportes generales</h1>
+  <p class="muted">RF-06: estadísticas de citas y afluencia, exportables en PDF/Excel.</p>
+
+  <div class="panel">
+    <form class="ancho-completo filtros" onsubmit="return false;">
+      <div class="campo">
+        <label for="desde">Desde</label>
+        <input type="date" id="desde" name="desde">
+      </div>
+      <div class="campo">
+        <label for="hasta">Hasta</label>
+        <input type="date" id="hasta" name="hasta">
+      </div>
+      <div class="campo">
+        <label for="especialidad-rep">Especialidad</label>
+        <select id="especialidad-rep" name="especialidad">
+          <option value="">Todas</option>
+          <option>Medicina General</option>
+          <option>Pediatría</option>
+          <option>Traumatología</option>
+        </select>
+      </div>
+      <div class="acciones">
+        <button class="btn btn-primario" type="submit">Filtrar</button>
+        <button class="btn btn-secundario" type="button">Exportar PDF</button>
+        <button class="btn btn-secundario" type="button">Exportar Excel</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="tabla-scroll">
+    <table>
+      <caption>Citas atendidas por especialidad (últimos 7 días)</caption>
+      <thead>
+        <tr><th>Especialidad</th><th>Citas agendadas</th><th>Atendidas</th><th>Canceladas</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Medicina General</td><td>62</td><td>54</td><td>8</td></tr>
+        <tr><td>Pediatría</td><td>40</td><td>37</td><td>3</td></tr>
+        <tr><td>Traumatología</td><td>21</td><td>18</td><td>3</td></tr>
+        <tr><td>Ginecología</td><td>17</td><td>15</td><td>2</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<footer class="app-footer">Hospital General San Juan — Panel Administrador</footer>
+</body>
+</html>

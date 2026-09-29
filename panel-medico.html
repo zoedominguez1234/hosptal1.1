@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Médico/Enfermera · Hospital General San Juan</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="brand"><span class="brand-mark">HSJ</span> Hospital General San Juan</div>
+  <nav><ul>
+    <li><a href="panel-medico.html" class="activo">Buscar Expediente</a></li>
+    <li><a href="historial-clinico.html">Historial Clínico</a></li>
+  </ul></nav>
+  <div class="usuario">
+    <span>Dra. Salazar</span>
+    <a href="index.html" class="btn btn-secundario" style="padding:6px 12px;">Salir</a>
+  </div>
+</header>
+
+<main>
+  <h1>Buscar expediente</h1>
+  <p class="muted">RF-05: consulta el historial clínico de un paciente durante la consulta.</p>
+
+  <div class="panel">
+    <form class="ancho-completo" onsubmit="return false;" role="search">
+      <div class="campo">
+        <label for="busqueda">Nombre o número de expediente</label>
+        <input type="text" id="busqueda" name="busqueda" placeholder="Ej. EXP-004821 o Elena Ramírez">
+      </div>
+      <div class="acciones">
+        <button class="btn btn-primario" type="submit">Buscar</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="tabla-scroll">
+    <table>
+      <caption>Resultados de búsqueda</caption>
+      <thead>
+        <tr><th>Expediente</th><th>Paciente</th><th>Última consulta</th><th>Alergias</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>EXP-004821</td><td>Elena Ramírez</td><td>02/09/2026</td>
+          <td><span class="estado estado-danger">Penicilina</span></td>
+          <td><a href="historial-clinico.html" class="btn btn-secundario" style="padding:6px 12px;">Abrir</a></td>
+        </tr>
+        <tr>
+          <td>EXP-002214</td><td>Jorge Andrade</td><td>18/08/2026</td>
+          <td><span class="muted">Sin registro</span></td>
+          <td><a href="historial-clinico.html" class="btn btn-secundario" style="padding:6px 12px;">Abrir</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<footer class="app-footer">Hospital General San Juan — Panel Médico/Enfermera</footer>
+</body>
+</html>

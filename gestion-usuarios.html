@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión de Usuarios · Hospital General San Juan</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="brand"><span class="brand-mark">HSJ</span> Hospital General San Juan</div>
+  <nav><ul>
+    <li><a href="panel-admin.html">Inicio</a></li>
+    <li><a href="gestion-usuarios.html" class="activo">Usuarios</a></li>
+    <li><a href="reportes.html">Reportes</a></li>
+  </ul></nav>
+  <div class="usuario">
+    <span>Admin. Torres</span>
+    <a href="index.html" class="btn btn-secundario" style="padding:6px 12px;">Salir</a>
+  </div>
+</header>
+
+<main>
+  <div class="acciones" style="justify-content:space-between; margin-bottom:14px;">
+    <h1 style="margin:0;">Gestión de usuarios</h1>
+    <button class="btn btn-primario">+ Agregar usuario</button>
+  </div>
+  <p class="muted">RF-01: asigna y controla el acceso al sistema según el rol.</p>
+
+  <div class="tabla-scroll">
+    <table>
+      <thead>
+        <tr><th>Nombre</th><th>Rol</th><th>Correo</th><th>Estado</th><th></th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dra. Salazar</td><td>Médico</td><td>salazar@hgsj.mx</td>
+          <td><span class="estado estado-ok">Activo</span></td>
+          <td><button class="btn btn-secundario" style="padding:6px 12px;">Editar</button> <button class="btn btn-peligro" style="padding:6px 12px;">Dar de baja</button></td>
+        </tr>
+        <tr>
+          <td>Enf. Morales</td><td>Enfermera</td><td>morales@hgsj.mx</td>
+          <td><span class="estado estado-ok">Activo</span></td>
+          <td><button class="btn btn-secundario" style="padding:6px 12px;">Editar</button> <button class="btn btn-peligro" style="padding:6px 12px;">Dar de baja</button></td>
+        </tr>
+        <tr>
+          <td>Admin. Torres</td><td>Administrador</td><td>torres@hgsj.mx</td>
+          <td><span class="estado estado-ok">Activo</span></td>
+          <td><button class="btn btn-secundario" style="padding:6px 12px;">Editar</button> <button class="btn btn-peligro" style="padding:6px 12px;">Dar de baja</button></td>
+        </tr>
+        <tr>
+          <td>Dr. Núñez</td><td>Médico</td><td>nunez@hgsj.mx</td>
+          <td><span class="estado" style="background:#EEE;color:#555;">Inactivo</span></td>
+          <td><button class="btn btn-secundario" style="padding:6px 12px;">Editar</button> <button class="btn btn-peligro" style="padding:6px 12px;">Dar de baja</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<footer class="app-footer">Hospital General San Juan — Panel Administrador</footer>
+</body>
+</html>

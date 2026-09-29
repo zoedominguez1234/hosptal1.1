@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar sesión · Hospital General San Juan</title>
+<link rel="stylesheet" href="css/estilos.css">
+<style>
+  body.pantalla-login{ display:flex; align-items:center; justify-content:center; min-height:100vh; padding:24px; }
+  .tarjeta-login{ width:100%; max-width:380px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:32px 30px; }
+  .tarjeta-login .marca{ display:flex; align-items:center; gap:10px; margin-bottom:22px; }
+  .tarjeta-login .marca .brand-mark{ width:36px;height:36px;border-radius:9px;background:var(--teal-700);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700; }
+  .roles-demo{ margin-top:18px; font-size:.82rem; color:var(--ink-muted); }
+  .roles-demo a{ display:block; margin-top:4px; }
+</style>
+</head>
+<body class="pantalla-login">
+  <main style="padding:0;">
+    <div class="tarjeta-login">
+      <div class="marca">
+        <span class="brand-mark">HSJ</span>
+        <div>
+          <strong>Hospital General San Juan</strong>
+          <div class="muted">Portal en línea</div>
+        </div>
+      </div>
+
+      <h1 style="font-size:1.2rem;">Iniciar sesión</h1>
+      <p class="muted">Ingresa tu número de expediente y contraseña para continuar.</p>
+
+      <!-- RF-01: autenticación con roles. Maqueta sin backend: los enlaces de abajo simulan el acceso por rol -->
+      <form class="ancho-completo" onsubmit="return false;">
+        <div class="campo">
+          <label for="expediente">Número de expediente</label>
+          <input type="text" id="expediente" name="expediente" required placeholder="EXP-000000">
+        </div>
+        <div class="campo">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" required>
+          <span class="error" id="error-login"></span>
+        </div>
+        <button type="submit" class="btn btn-primario" onclick="document.getElementById('error-login').textContent='';">Iniciar sesión</button>
+      </form>
+
+      <div class="roles-demo">
+        Vista previa de la maqueta (sin base de datos), entra directo como:
+        <a href="panel-paciente.html">→ Paciente</a>
+        <a href="panel-medico.html">→ Médico / Enfermera</a>
+        <a href="panel-admin.html">→ Administrador</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

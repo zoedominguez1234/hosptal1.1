@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historial Clínico · Hospital General San Juan</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="brand"><span class="brand-mark">HSJ</span> Hospital General San Juan</div>
+  <nav><ul>
+    <li><a href="panel-medico.html">Buscar Expediente</a></li>
+    <li><a href="historial-clinico.html" class="activo">Historial Clínico</a></li>
+  </ul></nav>
+  <div class="usuario">
+    <span>Dra. Salazar</span>
+    <a href="index.html" class="btn btn-secundario" style="padding:6px 12px;">Salir</a>
+  </div>
+</header>
+
+<main>
+  <h1>Elena Ramírez <span class="muted" style="font-weight:400;font-size:1rem;">· EXP-004821</span></h1>
+
+  <!-- Alerta clínica siempre visible: RF-05 + RNF-04 (accesibilidad, no depende de scroll) -->
+  <div class="alerta-alergia" role="alert">
+    ⚠️ Alergia registrada: <strong>Penicilina</strong>
+  </div>
+
+  <h2>Historial de consultas</h2>
+  <div class="linea-tiempo">
+    <div class="evento">
+      <time>02 sep 2026</time>
+      <h3>Medicina General — Dra. Salazar</h3>
+      <p>Diagnóstico: faringitis. Tratamiento: reposo e hidratación, seguimiento en 7 días.</p>
+    </div>
+    <div class="evento">
+      <time>14 jun 2026</time>
+      <h3>Laboratorio</h3>
+      <p>Biometría hemática dentro de parámetros normales.</p>
+    </div>
+    <div class="evento">
+      <time>20 mar 2026</time>
+      <h3>Medicina General — Dra. Salazar</h3>
+      <p>Consulta de control anual. Sin observaciones relevantes.</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:26px;">Registrar consulta</h2>
+  <div class="panel">
+    <form class="ancho-completo" onsubmit="return false;">
+      <div class="campo">
+        <label for="diagnostico">Diagnóstico</label>
+        <textarea id="diagnostico" name="diagnostico" rows="3" required></textarea>
+      </div>
+      <div class="campo">
+        <label for="tratamiento">Tratamiento indicado</label>
+        <textarea id="tratamiento" name="tratamiento" rows="3" required></textarea>
+      </div>
+      <div class="acciones">
+        <button class="btn btn-primario" type="submit">Guardar en el expediente</button>
+      </div>
+    </form>
+  </div>
+</main>
+<footer class="app-footer">Hospital General San Juan — Panel Médico/Enfermera</footer>
+</body>
+</html>

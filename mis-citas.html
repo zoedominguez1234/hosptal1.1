@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis Citas · Hospital General San Juan</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <div class="brand"><span class="brand-mark">HSJ</span> Hospital General San Juan</div>
+  <nav><ul>
+    <li><a href="panel-paciente.html">Inicio</a></li>
+    <li><a href="agendar-cita.html">Agendar Cita</a></li>
+    <li><a href="mis-citas.html" class="activo">Mis Citas</a></li>
+    <li><a href="ver-resultados.html">Resultados</a></li>
+  </ul></nav>
+  <div class="usuario">
+    <a class="icono-noti" href="notificaciones.html" aria-label="Notificaciones">🔔<span class="badge">2</span></a>
+    <span>Elena Ramírez</span>
+    <a href="index.html" class="btn btn-secundario" style="padding:6px 12px;">Salir</a>
+  </div>
+</header>
+
+<main>
+  <h1>Mis citas</h1>
+  <p class="muted">RF-02: consulta, reprograma o cancela tus citas médicas.</p>
+
+  <h2>Próximas</h2>
+  <div class="lista-tarjetas">
+    <div class="tarjeta-item">
+      <div class="info">
+        <h3>Medicina General — Dra. Salazar</h3>
+        <p class="muted">Miércoles 1 de octubre, 10:30 hrs · Consultorio 4</p>
+      </div>
+      <span class="estado estado-ok">Confirmada</span>
+      <div class="acciones">
+        <button class="btn btn-secundario">Reprogramar</button>
+        <button class="btn btn-peligro">Cancelar</button>
+      </div>
+    </div>
+    <div class="tarjeta-item">
+      <div class="info">
+        <h3>Traumatología — Dr. Núñez</h3>
+        <p class="muted">Lunes 13 de octubre, 09:00 hrs · Consultorio 2</p>
+      </div>
+      <span class="estado estado-warn">Por confirmar</span>
+      <div class="acciones">
+        <button class="btn btn-secundario">Reprogramar</button>
+        <button class="btn btn-peligro">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:28px;">Historial</h2>
+  <div class="lista-tarjetas">
+    <div class="tarjeta-item">
+      <div class="info">
+        <h3>Medicina General — Dra. Salazar</h3>
+        <p class="muted">Martes 2 de septiembre, 11:00 hrs</p>
+      </div>
+      <span class="estado" style="background:#EEE;color:#555;">Atendida</span>
+    </div>
+  </div>
+</main>
+<footer class="app-footer">Hospital General San Juan — Portal del Paciente</footer>
+</body>
+</html>
